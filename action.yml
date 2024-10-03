@@ -1,0 +1,18 @@
+name: "Rust Version Export Action"
+description: "A GitHub Action that extracts the version from Cargo.toml and exports it as an output."
+author: "Jannik Schroeder"
+date: "2024-10-03"
+inputs:
+  path:
+    description: "Path to the Cargo.toml file"
+    required: false
+    default: "./Cargo.toml"
+outputs:
+  version:
+    description: "The extracted Rust package version"
+runs:
+  using: "docker"
+  image: "Dockerfile"
+branding:
+  icon: "package"
+  color: "orange"
